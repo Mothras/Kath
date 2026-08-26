@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#fdf7f4" />
+  <meta name="description" content="For Kath ♡" />
+  <title>For Kath ♡</title>
+
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='0.9em' font-size='90' fill='%23b06f7c'%3E%E2%99%A1%3C/text%3E%3C/svg%3E" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Great+Vibes&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- Ambient soft background -->
+  <div class="blobs" aria-hidden="true"></div>
+  <div class="grain" aria-hidden="true"></div>
+
+  <!-- Music (starts on Open, keeps playing through the whole experience) -->
+  <audio id="bg-music" src="assets/music/jatuh-suka.mp3" preload="auto"></audio>
+
+  <!-- ================= OPENING ================= -->
+  <section id="opening" class="screen screen-opening">
+    <div id="particles" class="particles" aria-hidden="true"></div>
+    <div class="opening-inner">
+      <h1 class="opening-title">For Kath <span class="heart">♡</span></h1>
+      <p class="opening-line">I made a little something for you.</p>
+      <button id="open-btn" class="btn-open" type="button">Open ♡</button>
+    </div>
+  </section>
+
+  <!-- ================= MUSIC CONTROL ================= -->
+  <div id="music-control" class="music-control" hidden>
+    <span class="music-label">♫&nbsp;Jatuh Suka</span>
+    <button id="music-toggle" class="music-btn" type="button" aria-label="Pause music" title="Pause">❚❚</button>
+    <button id="mute-toggle" class="music-btn" type="button" aria-label="Mute music" title="Mute">♪</button>
+  </div>
+
+  <!-- ================= COUNTDOWN ================= -->
+  <section id="countdown" class="screen screen-countdown" hidden>
+    <div class="countdown-inner">
+      <p class="countdown-intro">Before you see it...</p>
+      <p class="countdown-sub">give me a few seconds.</p>
+      <div id="count-num" class="count-num anim">5</div>
+      <p id="count-text" class="count-text">For all the little moments...</p>
+    </div>
+  </section>
+
+  <!-- ================= PHOTO 1 ================= -->
+  <section id="photo-1" class="screen photo-section p1">
+    <div class="photo-wrap">
+      <span class="photo-number">01</span>
+      <figure class="photo-frame">
+        <img src="assets/photos/1.jpg" alt="Photo 1" loading="lazy" />
+      </figure>
+      <p class="photo-caption">You made my life a little more colorful.</p>
+    </div>
+    <div class="scroll-hint">scroll <span class="arrow">⌄</span></div>
+  </section>
+
+  <!-- ================= PHOTO 2 ================= -->
+  <section id="photo-2" class="screen photo-section p2">
+    <div class="photo-wrap">
+      <span class="photo-number">02</span>
+      <figure class="photo-frame">
+        <img src="assets/photos/2.jpg" alt="Photo 2" loading="lazy" />
+      </figure>
+      <p class="photo-caption">I love seeing you confident, happy, and simply being yourself.</p>
+    </div>
+    <div class="scroll-hint">scroll <span class="arrow">⌄</span></div>
+  </section>
+
+  <!-- ================= PHOTO 3 ================= -->
+  <section id="photo-3" class="screen photo-section p3">
+    <div class="photo-wrap">
+      <span class="photo-number">03</span>
+      <figure class="photo-frame">
+        <img src="assets/photos/3.jpg" alt="Photo 3" loading="lazy" />
+      </figure>
+      <p class="photo-caption">I love the little moments when we're together.</p>
+      <p class="photo-caption-sub">The conversations, the laughter, and even the quiet moments.</p>
+    </div>
+    <div class="scroll-hint">scroll <span class="arrow">⌄</span></div>
+  </section>
+
+  <!-- ================= PHOTO 4 ================= -->
+  <section id="photo-4" class="screen photo-section p4">
+    <div class="photo-wrap">
+      <span class="photo-number">04</span>
+      <figure class="photo-frame">
+        <img src="assets/photos/4.jpg" alt="Photo 4" loading="lazy" />
+      </figure>
+      <p class="photo-caption">I'm genuinely happy that I got to meet you.</p>
+    </div>
+    <div class="scroll-hint">scroll <span class="arrow">⌄</span></div>
+  </section>
+
+  <!-- ================= PHOTO 5 ================= -->
+  <section id="photo-5" class="screen photo-section p5">
+    <div class="photo-wrap">
+      <span class="photo-number">05</span>
+      <figure class="photo-frame">
+        <img src="assets/photos/5.jpg" alt="Photo 5" loading="lazy" />
+      </figure>
+      <p class="photo-caption">And I'm grateful for every memory we've made so far.</p>
+    </div>
+  </section>
+
+  <!-- ================= TRANSITION TO LETTER ================= -->
+  <section id="transition" class="screen screen-transition">
+    <p class="transition-line">There's something I've been meaning to say...</p>
+  </section>
+
+  <!-- ================= FINAL MESSAGE ================= -->
+  <section id="letter" class="screen screen-letter">
+    <div class="letter-body">
+      <p class="letter-block">I'm grateful that I met you,<br />because somehow, you made my life a little more colorful.</p>
+      <p class="letter-block">I love seeing you being confident,<br />being happy, and simply being yourself.</p>
+      <p class="letter-block">I love the little moments when we're together.<br />The conversations, the laughter,<br />and even the quiet moments that don't need words.</p>
+      <p class="letter-block letter-center">There's something I've always wanted to say...</p>
+      <p class="letter-block">I'm genuinely happy that I met you.<br />And I'm proud to know someone like you.</p>
+      <p class="letter-block">But perhaps, the thing I'm most grateful for<br />is that we found each other at a time<br />when we were both learning to be okay on our own.</p>
+      <p class="letter-block">Maybe that's why meeting you feels a little more special.</p>
+      <p class="letter-block">I don't know what our story will become,<br />and I don't want to rush it.</p>
+      <p class="letter-block">For now,<br />I'm just grateful that you're here.</p>
+      <p class="letter-block letter-sign">Thank you for being you, Kath. ♡</p>
+    </div>
+  </section>
+
+  <!-- ================= CLOSING ================= -->
+  <section id="closing" class="screen screen-closing">
+    <div class="hearts" aria-hidden="true"></div>
+    <div class="closing-inner">
+      <p class="closing-line">Whatever this story becomes,<br />I'm just grateful that I got to meet you.</p>
+      <p class="closing-sig">— from someone who's really glad he met you.</p>
+    </div>
+  </section>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
+
